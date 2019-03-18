@@ -2,7 +2,8 @@
 
 import window from 'global/window';
 import React, { Component } from 'react';
-import DeckGL, { MapView, MapController, COORDINATE_SYSTEM } from 'deck.gl';
+import DeckGL from '@deck.gl/react';
+import { MapView, MapController } from '@deck.gl/core';
 import { StaticMap } from 'react-map-gl';
 import circle from '@turf/circle';
 
@@ -535,10 +536,6 @@ export default class Example extends Component<
       modeHandlers,
       mode,
       modeConfig,
-      // TODO: remove this after update to 6.2
-      fp64: false,
-      coordinateSystem: COORDINATE_SYSTEM.LNGLAT_EXPERIMENTAL,
-      //
       autoHighlight: false,
 
       // Editing callbacks
